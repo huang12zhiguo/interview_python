@@ -1,4 +1,4 @@
-<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+﻿<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
 **Table of Contents**
 
 
@@ -914,11 +914,11 @@ Bulid过程可以分解为4个步骤:预处理(Prepressing), 编译(Compilation)
 
 ### Redis数据库
 
-> ​	通常局限点来说，Redis也以消息队列的形式存在，作为内嵌的List存在，满足实时的高并发需求。在使用缓存的时候，redis比memcached具有更多的优势，并且支持更多的数据类型，把redis当作一个中间存储系统，用来处理高并发的数据库操作
+> ​	通常局限点来说，Redis也以消息队列的形式存在，作为内嵌的List存在，满足实时的高并发需求。在使用缓存的时候，redis比memcached具有更多的优势，并且支持更多的数据类型，把redis当作一个中间存储系统，用来处理高并发的数据库操作。
 
-- 速度快：使用标准C写，所有数据都在内存中完成，读写速度分别达到10万/20万 
-- 持久化：对数据的更新采用Copy-on-write技术，可以异步地保存到磁盘上，主要有两种策略，一是根据时间，更新次数的快照（save 300 10 ）二是基于语句追加方式(Append-only file，aof) 
-- 自动操作：对不同数据类型的操作都是自动的，很安全 
+- 速度快：使用标准C写，所有数据都在内存中完成，读写速度分别达到10万/20万 。
+- 持久化：对数据的更新采用Copy-on-write技术，可以异步地保存到磁盘上，主要有两种策略，一是根据时间，更新次数的快照（save 300 10 ）二是基于语句追加方式(Append-only file，aof) 。
+- 自动操作：对不同数据类型的操作都是自动的，很安全 。
 - 快速的主--从复制，官方提供了一个数据，Slave在21秒即完成了对Amazon网站10G key set的复制。 
 - Sharding技术： 很容易将数据分布到多个Redis实例中，数据库的扩展是个永恒的话题，在关系型数据库中，主要是以添加硬件、以分区为主要技术形式的纵向扩展解决了很多的应用场景，但随着web2.0、移动互联网、云计算等应用的兴起，这种扩展模式已经不太适合了，所以近年来，像采用主从配置、数据库复制形式的，Sharding这种技术把负载分布到多个特理节点上去的横向扩展方式用处越来越多。
 
@@ -930,11 +930,11 @@ Bulid过程可以分解为4个步骤:预处理(Prepressing), 编译(Compilation)
 
 ## 4 乐观锁和悲观锁
 
-悲观锁：假定会发生并发冲突，屏蔽一切可能违反数据完整性的操作
+悲观锁：假定会发生并发冲突，屏蔽一切可能违反数据完整性的操作。
 
 乐观锁：假设不会发生并发冲突，只在提交操作时检查是否违反数据完整性。
 
-乐观锁与悲观锁的具体区别: http://www.cnblogs.com/Bob-FD/p/3352216.html
+乐观锁与悲观锁的具体区别: http://www.cnblogs.com/Bob-FD/p/3352216.html。
 
 ## 5 MVCC
 
