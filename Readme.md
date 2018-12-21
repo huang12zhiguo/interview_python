@@ -261,7 +261,7 @@ print p2.name  # aaa
 print Person.name  # aaa
 ```
 
-这里`p1.name="bbb"`是实例调用了类变量,这其实和上面第一个问题一样,就是函数传参的问题,`p1.name`一开始是指向的类变量`name="aaa"`,但是在实例的作用域里把类变量的引用改变了,就变成了一个实例变量,self.name不再引用Person的类变量name了.
+这里`p1.name="bbb"`是实例调用了类变量,这其实和上面第一个问题一样,就是函数传参的问题,`p1.name`一开始是指向的类变量`name="aaa"`,但是在实例的作用域里把类变量的引用改变了,就变成了一个实例变量,self.name不再引用Person的类变量name了。
 
 可以看看下面的例子:
 
@@ -363,7 +363,7 @@ http://stackoverflow.com/questions/5082452/python-string-formatting-vs-format
 
 这里有个关于生成器的创建问题面试官有考：
 问：  将列表生成式中[]改成() 之后数据结构是否改变？ 
-答案：是，从列表变为生成器
+答案：是，从列表变为生成器。
 
 ```python
 >>> L = [x*x for x in range(10)]
